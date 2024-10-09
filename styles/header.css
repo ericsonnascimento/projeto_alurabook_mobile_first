@@ -3,11 +3,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; /*menu hamburguer - libera a possibilidade de usar a lista no top, botton, left, right, apneas tiramos de static para relative*/
 }
 
 .container {
     display: flex;
     align-items: center;
+}
+
+.container__botao {
+    display: none;
 }
 
 .cabecalho__menu-hamburguer {
@@ -16,12 +21,41 @@
     background-image: url('../img/Menu.svg');
     background-repeat: no-repeat;
     background-position: center;
-    display: inline-block; /* Permite aplicar width e height ao span */
+    display: inline-block; /* Permite aplicar width e height ao <span> */
 }
 
 .container__imagem {
     padding: 1rem;
 }
 
+.lista-menu {
+    display: none;
+    position: absolute; /*menu hamburguer - permite que movimente um elemento de acordo com o pai, no nosso caso é o .container*/
+    top: 100%; /*menu hamburgue - com o top 100% ao clicar no menu a lista fica abaixo do .cabecalho graças ao relative e absolute */
+    width: 60vw;
+}
 
+/* menu hamburguer - aqui estamos fazendo uma condicional CSS, se o .container__botão estiver checked ele 
+vai pegar acionar a próxima classe "utilizando a condicional ~ " no nosso caso é a .lista-menu */
+.container__botao:checked~.lista-menu {
+    display: block;
+}
 
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1rem;
+    background-color: var(--cor-branca);
+}
+
+.lista-menu__titulo {
+    color: var(--cor-laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background-color: var(--cor-azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
