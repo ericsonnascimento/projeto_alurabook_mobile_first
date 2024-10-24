@@ -1,3 +1,6 @@
+
+/* Resolução 428px TABLET */
+
 .cabecalho {
     background-color: var(--cor-branca);
     display: flex;
@@ -58,4 +61,56 @@ vai pegar acionar a próxima classe "utilizando a condicional ~ " no nosso caso 
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-transform: uppercase;
+}
+
+/* Resolução 1024px TABLET */
+
+.container__titulo {
+    display: none;
+}
+
+/* o que precisarmos que SUMA é display:none*/
+.opcoes {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .container__titulo,
+    .container__titulo--negrito {
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+        color: var(--cor-preto);
+    }
+
+    /* o que precisarmos que APAREÇA é display:block*/
+    .container__titulo {
+        font-weight: 400;
+        display: block;
+    }
+
+    .container__titulo--negrito {
+        font-weight: 700;
+    }
+
+    .opcoes {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .opcoes__item {
+        text-transform: uppercase;
+    }
+
+    .opcoes__link {
+        text-decoration: none;
+        color: var(--cor-preto);
+    }
+
+    .container__imagem_transparente {
+        display: none;
+    }
+
+    .cabecalho__menu-hamburguer {
+        display: none;
+    }
 }
