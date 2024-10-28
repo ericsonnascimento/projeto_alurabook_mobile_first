@@ -14,10 +14,6 @@
     align-items: center;
 }
 
-.container__botao {
-    display: none;
-}
-
 .cabecalho__menu-hamburguer {
     width: 24px;
     height: 24px;
@@ -63,16 +59,15 @@ vai pegar acionar a próxima classe "utilizando a condicional ~ " no nosso caso 
     text-transform: uppercase;
 }
 
-/* Resolução 1024px TABLET */
-
-.container__titulo {
-    display: none;
-}
-
 /* o que precisarmos que SUMA é display:none*/
+.container__titulo,
+.container__texto,
+.container__botao,
 .opcoes {
     display: none;
 }
+
+/* Resolução 1024px TABLET */
 
 @media screen and (min-width: 1024px) {
     .container__titulo,
@@ -121,5 +116,30 @@ vai pegar acionar a próxima classe "utilizando a condicional ~ " no nosso caso 
 
     .opcoes__botao {
         display: none;
+    }
+}
+
+/* Resolução 1280px DESKTOP */
+
+@media screen and (min-width: 1280px){
+    .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--cor-preto);
+    }
+
+    .container {
+        margin: 0 1rem;
+    }
+
+    .container__texto {
+        display: block;
+    }
+
+    /* opção para mover um elemento para esquerda, direita, cima ou baixo utilizando "margin-direção auto" 
+    o objeto se moverá para direção contrária a solicitada, tem ue está aplicado o display: flex para funcionar*/
+    .opcoes {
+        margin-right: auto;
     }
 }

@@ -31,6 +31,8 @@
     font-size: 14px;
 }
 
+/* Resolução 1024px TABLET */
+
 @media screen and (min-width: 1024px) {
     .topico__titulo {
         font-size: 24px;
@@ -38,5 +40,17 @@
 
     .topico__link {
         font-size: 24px;
+    }
+}
+
+/* Resolução 1280px DESKTOP */
+
+@media screen and (min-width: 1280px ) {
+    .topico {
+        padding: 3rem 20vw;
+    }
+
+    .topico__titulo {
+        font-size: 32px;
     }
 }

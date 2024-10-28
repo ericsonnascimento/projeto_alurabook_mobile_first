@@ -74,6 +74,8 @@
     text-decoration: none;
 }
 
+/* Resolução 1024px TABLET */
+
 @media screen and (min-width: 1024px) {
     .carrocel__titulo {
         font-size: 26px;
@@ -98,5 +100,39 @@
         margin: 2rem auto;
         width: 40%;
         
+    }
+}
+
+/* Resolução 1280px DESKTOP */
+
+@media screen and (min-width: 1280px) {
+    .carrocel__container {
+        display: flex;
+        align-items: center;
+        margin: 0 15vw 6rem 15vw;
+    }
+
+    .swiper-pagination {
+        margin: 1rem 0;
+    }
+    
+    .swiper {
+        width: 50%;
+    }
+
+    .descricao__titulo {
+        margin-right: 2rem;
+        font-size: 32px;
+    }
+
+    .card {
+        width: 50%;
+        margin: 3rem 0 0 2rem;
+
+    }
+
+    .descricao__texto {
+        margin-right: 2rem;
+        font-size: 16px;
     }
 }

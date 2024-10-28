@@ -34,6 +34,8 @@
     background-position: 0.5rem;
 }
 
+/* Resolução 1024px TABLET */
+
 @media screen and (min-width: 1024px) {
     .banner__titulo {
         font-size: 36px;
@@ -45,5 +47,17 @@
 
     .banner__pesquisa::placeholder {
         background-position: 5rem;
+    }
+}
+
+/* Resolução 1280px DESKTOP */
+
+@media screen and (min-width: 1280px) {
+    .banner__pesquisa {
+        width: 40%;
+    }
+
+    .banner {
+        padding: 6rem 0;
     }
 }

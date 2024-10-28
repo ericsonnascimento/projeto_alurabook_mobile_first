@@ -11,6 +11,8 @@ hr {
     display: none;
 }
 
+/* Resolução 1024px TABLET */
+
 @media screen and (min-width: 1024px) {
     .rodape {
         display: flex;
@@ -44,5 +46,19 @@ hr {
         font-size: 14px;
         text-decoration: none;
         color: var(--cor-cinza);
+    }
+}
+
+/* Resolução 1280px DESKTOP */
+
+@media screen and (min-width: 1280px) {
+    .rodape {
+        padding: 3rem 0;
+    }
+
+    /* aplicando linha divisória lateral */
+    .lista-rodape {
+        padding-left: 1rem;
+        border-left: 1px solid var(--cor-cinza-claro);
     }
 }
