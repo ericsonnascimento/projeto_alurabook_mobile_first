@@ -9,6 +9,15 @@
     position: relative; /*menu hamburguer - libera a possibilidade de usar a lista no top, botton, left, right, apneas tiramos de static para relative*/
 }
 
+/* aplicando efeito no menu hamburguer, se o container__botão estiver macrado como checked ir para a classe
+depois dele que no nosso caso é container__rotulo acessando a classe filho que é .cabecalho__menu-hamburguer
+então alterar background-image e background-color aplicando um efeito de mudança de cor ao clicar no menu*/
+.container__botao:checked~.container__rotulo>.cabecalho__menu-hamburguer {
+    background-image: url('../img/MenuAberto.svg');
+    background-color: var(--cor-azul-degrade);
+}
+/* fim dos efeitos no menu hamburguer */
+
 .container {
     display: flex;
     align-items: center;
@@ -117,6 +126,27 @@ vai pegar acionar a próxima classe "utilizando a condicional ~ " no nosso caso 
     .opcoes__botao {
         display: none;
     }
+
+    /* aplicando efeito no menu, se o opcoes__botão estiver macrado como checked ir para a classe
+    depois dele que no nosso caso é opcoes__rotulo acessando a classe filho que é .opcoes__item então alterar
+    background-color e color aplicando um efeito de mudança de cor ao clicar no menu*/
+    .opcoes__botao:checked~.opcoes__rotulo>.opcoes__item {
+        background-color: var(--cor-azul-degrade);
+        color: var(--cor-branca);
+    }
+
+    .opcoes__item {
+        padding: 2rem 1rem;
+    }
+
+    .lista-menu__item:hover {
+        background-color: var(--cor-azul-degrade);
+    }
+
+    .lista-menu__item:hover>.lista-menu__link {
+        -webkit-text-fill-color: var(--cor-branca);
+    }
+    /* fim dos efeitos no menu */
 }
 
 /* Resolução 1280px DESKTOP */
